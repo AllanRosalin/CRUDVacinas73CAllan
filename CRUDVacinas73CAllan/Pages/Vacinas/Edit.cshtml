@@ -1,0 +1,50 @@
+﻿@page
+@model CRUDVacinas73CAllan.Pages.Vacinas.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Vacina</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Vacina.Id" />
+            <div class="form-group">
+                <label asp-for="Vacina.lote" class="control-label"></label>
+                <input asp-for="Vacina.lote" class="form-control" />
+                <span asp-validation-for="Vacina.lote" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vacina.Quantidade" class="control-label"></label>
+                <input asp-for="Vacina.Quantidade" class="form-control" />
+                <span asp-validation-for="Vacina.Quantidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vacina.Datafabricacao" class="control-label"></label>
+                <input asp-for="Vacina.Datafabricacao" class="form-control" />
+                <span asp-validation-for="Vacina.Datafabricacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vacina.Datavencimento" class="control-label"></label>
+                <input asp-for="Vacina.Datavencimento" class="form-control" />
+                <span asp-validation-for="Vacina.Datavencimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

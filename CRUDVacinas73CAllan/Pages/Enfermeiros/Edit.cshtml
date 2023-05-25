@@ -1,0 +1,60 @@
+﻿@page
+@model CRUDVacinas73CAllan.Pages.Enfermeiros.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Enfermeiro</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Enfermeiro.Id" />
+            <div class="form-group">
+                <label asp-for="Enfermeiro.Nome" class="control-label"></label>
+                <input asp-for="Enfermeiro.Nome" class="form-control" />
+                <span asp-validation-for="Enfermeiro.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enfermeiro.Rg" class="control-label"></label>
+                <input asp-for="Enfermeiro.Rg" class="form-control" />
+                <span asp-validation-for="Enfermeiro.Rg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enfermeiro.Cpf" class="control-label"></label>
+                <input asp-for="Enfermeiro.Cpf" class="form-control" />
+                <span asp-validation-for="Enfermeiro.Cpf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enfermeiro.Endereco" class="control-label"></label>
+                <input asp-for="Enfermeiro.Endereco" class="form-control" />
+                <span asp-validation-for="Enfermeiro.Endereco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enfermeiro.Coren" class="control-label"></label>
+                <input asp-for="Enfermeiro.Coren" class="form-control" />
+                <span asp-validation-for="Enfermeiro.Coren" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enfermeiro.Dataadmissao" class="control-label"></label>
+                <input asp-for="Enfermeiro.Dataadmissao" class="form-control" />
+                <span asp-validation-for="Enfermeiro.Dataadmissao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

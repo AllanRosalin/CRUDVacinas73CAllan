@@ -1,0 +1,46 @@
+﻿@page
+@model CRUDVacinas73CAllan.Pages.Vacinas.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Vacina</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vacina.lote)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vacina.lote)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vacina.Quantidade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vacina.Quantidade)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vacina.Datafabricacao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vacina.Datafabricacao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vacina.Datavencimento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vacina.Datavencimento)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Vacina.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
